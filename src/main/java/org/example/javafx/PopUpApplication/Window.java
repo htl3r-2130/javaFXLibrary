@@ -6,15 +6,19 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class PopUpWindow extends Application {
+public class Window extends Application {
     public static void main(String[] args) {
         launch(args);
     }
     @Override
     public void start(Stage stage) throws Exception {
 
-        Button button = new Button("Test");
-        button.setOnAction(e -> AlertBox.display("title", "AlertBox!"));
+        Button button = new Button("Click");
+        button.setOnAction(e -> {
+            boolean res = ConfirmBox.display("title", "AlertBox!");
+            System.out.println(res);
+        });
+        //button.setOnAction(e -> AlertBox.display("title", "AlertBox!"));
 
         StackPane stackPane = new StackPane();
         stackPane.getChildren().add(button);
