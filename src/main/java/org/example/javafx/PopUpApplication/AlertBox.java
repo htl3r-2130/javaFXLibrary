@@ -1,4 +1,4 @@
-package org.example.javafx;
+package org.example.javafx.PopUpApplication;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
